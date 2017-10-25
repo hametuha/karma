@@ -1,0 +1,95 @@
+.karma-error-message {
+
+  padding: 1em;
+  border-radius: 2px;
+  background: #d54e21;
+  color: #fff;
+  font-weight: bold;
+  margin: 2em 0;
+  font-size: 20px;
+  img {
+    margin-top: 1em;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  a:link, a:visited {
+    color: inherit;
+    text-decoration: underline;
+  }
+  a:hover, a:active {
+    color: yellow;
+    text-decoration: none;
+  }
+}
+
+table.wp-list-table.points {
+
+  .column-status {
+    width: 3em;
+  }
+  em {
+    margin-left: 0.5em;
+  }
+  @media only screen and (min-width: 783px) {
+
+    td.column-status {
+      text-align: center;
+      em {
+        display: none;
+      }
+
+      $success-color: #61ad6f;
+      .dashicons-yes {
+        color: $success-color;
+        & + em {
+          color: $success-color;
+        }
+      }
+      $failed-color: #cbcbcb;
+      .dashicons-no {
+        color: $failed-color;
+        & + em {
+          color: $failed-color;
+        }
+      }
+    }
+  }
+}
+
+.karma-user-input{
+  min-width: 200px;
+}
+
+#karma-point-editor{
+  padding: 10px 0;
+  &.loading{
+    position: relative;
+    z-index: 1;
+    &:after{
+      display: block;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: -10px;
+      right: -10px;
+      bottom: 0;
+      background: transparentize( #f9f9f9, .9 );
+      z-index: 10;
+    }
+    &:before{
+      display: block;
+      position :absolute;
+      content: "Loading...";
+      font-family: monospace;
+      z-index: 11;
+      top: 50%;
+      left: 50%;
+      transform: translate( -50% -50% );
+      padding: 20px;
+      font-size: 40px;
+      background: #000;
+      color: #fff;
+    }
+  }
+}
